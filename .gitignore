@@ -1,1 +1,6 @@
-.venv/\n__pycache__/\nnode_modules/\n.env\nresults/runs/*
+.venv/
+__pycache__/
+node_modules/
+.env
+results/runs/*
+!results/runs/.gitkeep
