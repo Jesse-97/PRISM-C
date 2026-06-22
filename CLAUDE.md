@@ -48,7 +48,7 @@ flag it as out of scope rather than building it.
 
 ## Locked variant list — do not add a fourth without explicit instruction
 
-- `variant_embed` — embedder swap only (BGE-base → BGE-large / e5-large)
+- `variant_embed` — embedder swap only (BGE-base local → Cohere Embed 4 via OCI)
 - `variant_hybrid` — retrieval strategy swap only (dense-only → hybrid
   dense+BM25 with Reciprocal Rank Fusion; RRF k=60 unless tuning is
   explicitly requested)

@@ -44,7 +44,7 @@ mode results convincingly, not as a second source of conclusions.
 | Profile | Axis changed | Held constant | Hypothesis |
 |---|---|---|---|
 | `baseline` | None — this is the reference point | All components at default: BGE-base embedder, cosine similarity, MiniLM-L-6-v2 reranker, Gemma 4B synthesis | N/A — control against which all variants are measured |
-| `variant_embed` | Embedder: BGE-base → BGE-large / e5-large | Reranker, synthesis model, retrieval strategy | Does a larger embedder raise Recall@5 on banking-jargon queries? |
+| `variant_embed` | Embedder: BGE-base (local) → Cohere Embed 4 (OCI) | Reranker, synthesis model, retrieval strategy | Does a hosted, differently-trained embedder raise Recall@5 on banking-jargon queries compared to local BGE-base? |
 | `variant_hybrid` | Retrieval: dense-only → hybrid dense+BM25 (RRF fusion, k=60) | Embedder, reranker, synthesis model | Does lexical matching recover product-name queries dense retrieval misses? |
 | `variant_llm` | Synthesis: Gemma 4B local → Cohere Command R (OCI) | Embedder, retrieval strategy, reranker | Does a stronger synthesis model raise faithfulness enough to justify cost/latency? |
 
